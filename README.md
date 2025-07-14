@@ -54,19 +54,19 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 git clone https://github.com/arushisinhaa/CivicFix-Project.git
 cd CivicFix-Project
 
-### 2. Setup Frontend
-```bash
+2. Setup Frontend
+bash
 cd client
 npm install
 npm run dev   # or npm start
 
-### 3. Setup Backend
-```bash
+3. Setup Backend
+bash
 cd server
 npm install
 npm run dev
 
-### 4. Configure Environment Variables
+4. Configure Environment Variables
 Create a .env file inside the server/ directory and add the following:
 ADMIN_CREATION_KEY: ""
 ATLASDB: ""
@@ -83,6 +83,6 @@ Password: R0han@2025
 Email: meera.sharma91@gmail.com
 Password: Meer@1234
 
-🛠Admin Login:
+Admin Login:
 Email: arushisinha@gmail.com
 Password: 123456
