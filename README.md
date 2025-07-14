@@ -48,20 +48,17 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 
 ## Local Setup Instructions
 
-### 1. Clone the Repository
-
-```bash
+1. Clone the Repository
+```
 git clone https://github.com/arushisinhaa/CivicFix-Project.git
 cd CivicFix-Project
 
 2. Setup Frontend
-bash
 cd client
 npm install
 npm run dev   # or npm start
 
 3. Setup Backend
-bash
 cd server
 npm install
 npm run dev
