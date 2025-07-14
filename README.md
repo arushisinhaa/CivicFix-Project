@@ -15,7 +15,7 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 **Frontend:**  
 - React.js  
 - React Router  
-- Tailwind CSS / Custom CSS  
+- Custon CSS
 - Axios
 
 **Backend:**  
@@ -24,7 +24,6 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 - MongoDB (with Mongoose)  
 - Multer (for image uploads)  
 - JWT (for authentication)  
-- Cloudinary (for image storage, optional)
 
 **Deployment:**  
 - Frontend: Vercel 
