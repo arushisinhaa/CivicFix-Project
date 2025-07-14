@@ -86,3 +86,8 @@ Password: Meer@1234
 Admin Login:
 Email: arushisinha@gmail.com
 Password: 123456
+
+**Note:**  
+> On the first attempt, login might not work immediately due to backend cold starts or deployment delays (especially on free-tier hosting platforms like Render).  
+> **Please refresh the page 2–3 times and then try logging in again.**  
+> Once you log in, give it a few seconds to fetch the data and navigate smoothly.
