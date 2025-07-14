@@ -1,0 +1,63 @@
+/* Global.css */
+:root {
+  --primary-blue: #2f80ed;
+  --white: #ffffff;
+  --charcoal: #333333;
+  --gray: #e0e0e0;
+  --pending: #f2c94c;
+  --in-progress: #f2994a;
+  --resolved: #27ae60;
+  --error: #eb5757;
+  --hover-blue: #56ccf2;
+  --teal: #2d9cdb;
+  --light-gray: #f7f8fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--charcoal);
+  margin: 1.5rem auto;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}

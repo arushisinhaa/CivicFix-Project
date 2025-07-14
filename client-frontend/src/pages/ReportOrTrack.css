@@ -1,0 +1,260 @@
+:root {
+  --primary-blue: #2f80ed;
+  --teal: #2d9cdb;
+  --white: #ffffff;
+  --charcoal: #333333;
+  --light-gray: #f7f8fa;
+  --medium-gray: #e0e0e0;
+  --shadow: 0 4px 16px rgba(47, 128, 237, 0.08);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.issue-container {
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-bar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.home-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.home-link:hover {
+  color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.main-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.options-container {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.option-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--medium-gray);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(47, 128, 237, 0.15);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 220px;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.option-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.option-card:hover .option-image {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.content-wrapper {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.option-title {
+  font-size: 1.6rem;
+  color: var(--charcoal);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.option-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--teal);
+}
+
+.option-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  text-align: center;
+  margin-bottom: 1.8rem;
+  flex-grow: 1;
+}
+
+.action-button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 0.9rem;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.action-button:hover {
+  background-color: var(--teal);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(45, 156, 219, 0.3);
+}
+
+/* Tablet Styles (768px+) */
+@media (min-width: 768px) {
+  .issue-container {
+    padding: 2rem;
+  }
+
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-link {
+    margin-bottom: 0;
+  }
+
+  .main-heading {
+    margin-bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+
+  .options-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .option-title {
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper {
+    height: 240px;
+  }
+}
+
+/* Laptop/Desktop Styles (1024px+) */
+@media (min-width: 1024px) {
+  .issue-container {
+    padding: 3rem 2rem;
+  }
+
+  .options-container {
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .image-wrapper {
+    height: 280px;
+  }
+
+  .option-title {
+    font-size: 1.7rem;
+  }
+
+  .option-description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Desktop Styles (1200px+) */
+@media (min-width: 1200px) {
+  .image-wrapper {
+    height: 300px;
+  }
+}
+
+/* Mobile Landscape Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .options-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-wrapper {
+    height: 200px;
+  }
+}
