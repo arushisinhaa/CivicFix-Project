@@ -48,8 +48,8 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 
 ## Local Setup Instructions
 
-1. Clone the Repository
 ```
+1. Clone the Repository
 git clone https://github.com/arushisinhaa/CivicFix-Project.git
 cd CivicFix-Project
 
