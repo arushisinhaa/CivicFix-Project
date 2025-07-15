@@ -338,7 +338,7 @@ export default function TrackIssue() {
                     <h4 className="trackAnIssue-section-title">Issue Image</h4>
                     <div className="trackAnIssue-image-container">
                       <img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${selectedIssue.imageUrl}`}
+                        src={selectedIssue.imageUrl}
                         alt={selectedIssue.title}
                         className="trackAnIssue-issue-image"
                       />

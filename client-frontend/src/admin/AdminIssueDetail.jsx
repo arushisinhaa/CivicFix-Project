@@ -148,7 +148,7 @@ function AdminIssueDetail() {
             <h3 className="admin-section-title">Issue Image</h3>
             <div className="admin-image-container">
               <img
-                src={`${process.env.REACT_APP_BACKEND_URL}${issue.imageUrl}`}
+                src={issue.imageUrl}
                 alt={issue.title}
                 className="admin-issue-image"
               />

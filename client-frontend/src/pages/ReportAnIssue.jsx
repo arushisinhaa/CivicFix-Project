@@ -410,7 +410,6 @@ export default function ReportIssue() {
                     {new Date(issue.createdAt).toLocaleDateString()}
                   </p>
 
-                  {/* Added description container */}
                   <div className="reportanIssue-description-container">
                     <p className="reportanIssue-issue-description">
                       {issue.description}
@@ -419,10 +418,7 @@ export default function ReportIssue() {
 
                   {issue.imageUrl && (
                     <div className="reportanIssue-issue-card-image">
-                      <img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${issue.imageUrl}`}
-                        alt={issue.title}
-                      />
+                      <img src={issue.imageUrl} alt={issue.title} />
                     </div>
                   )}
                 </div>
@@ -476,7 +472,7 @@ export default function ReportIssue() {
                       }}
                     >
                       <img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${selectedIssue.imageUrl}`}
+                        src={selectedIssue.imageUrl}
                         alt={selectedIssue.title}
                         style={{
                           maxWidth: "100%",

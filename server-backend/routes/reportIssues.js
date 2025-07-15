@@ -1,20 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
-const path = require("path");
+const { storage } = require("../cloudinary");
+const upload = multer({ storage });
+
 const Issue = require("../models/Issue");
 const User = require("../models/User");
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  },
-});
-
-const upload = multer({ storage });
 
 router.post("/report", upload.single("image"), async (req, res) => {
   try {
@@ -26,7 +17,7 @@ router.post("/report", upload.single("image"), async (req, res) => {
       title,
       category,
       description,
-      imageUrl: req.file ? `/uploads/${req.file.filename}` : "",
+      imageUrl: req.file ? req.file.path : "",
       location: {
         lat: Number(lat),
         lng: Number(lng),
