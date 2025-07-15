@@ -20,10 +20,11 @@ Whether it’s a broken lamp post or a sanitation issue, **CivicFix** is your go
 
 **Backend:**  
 - Node.js  
-- Express.js  
+- Express.js
+- Cloudinary
 - MongoDB (with Mongoose)  
 - Multer (for image uploads)  
-- JWT (for authentication)  
+- JWT (for authentication)
 
 **Deployment:**  
 - Frontend: Vercel 
