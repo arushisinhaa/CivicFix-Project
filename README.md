@@ -71,6 +71,9 @@ JWT_SECRET: ""
 MONGO_URI: ""
 NODE_ENV: ""
 SECRET: ""
+CLOUD_NAME: ""
+CLOUD_API_KEY: ""
+CLOUD_SECRET: ""
 
 Testing Credentials
 User Logins:
